@@ -1,264 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Leandro Antonio Fortunato — Currículo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo - Leandro Antonio Fortunato</title>
   <style>
-    :root{
-      --bg:#ffffff;
-      --card:#f8fafb;
-      --text:#0f172a;
-      --muted:#475569;
-      --accent:#0b74de;
-      --accent-2:#0b5fcf;
-      --border:#e6eef6;
-      --shadow: 0 6px 18px rgba(9,30,66,0.08);
-      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:linear-gradient(180deg, #f4f7fb 0%, var(--bg) 40%);
-      color:var(--text);
-      line-height:1.55;
-      padding:32px;
-      font-size:16px;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .container{
-      width:100%;
-      max-width:920px;
-      margin:auto;
-      background:var(--bg);
-      border-radius:10px;
-      box-shadow:var(--shadow);
-      border:1px solid var(--border);
-      display:grid;
-      grid-template-columns: 1fr 320px;
+    h1, h2, h3 {
+      color: #222;
+      margin-bottom: 10px;
     }
 
-    @media (max-width:880px){
-      body{padding:18px}
-      .container{grid-template-columns:1fr}
+    h1 {
+      font-size: 28px;
+      text-align: center;
     }
 
-    /* ===== Main ===== */
-    .main{padding:32px 36px}
-    .name h1{margin:0;font-size:24px}
-    .title{color:var(--muted);font-weight:600;font-size:13px}
-    .contact{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 20px 0;font-size:14px;color:var(--muted)}
-    .contact a{color:var(--accent);text-decoration:none}
-    .dot{opacity:.45}
-    h2.section{margin:22px 0 12px 0;font-size:15px;color:#0f172a;border-bottom:1px solid var(--border);padding-bottom:8px}
-    p.lead{margin:0;text-align:justify;color:var(--muted)}
-    ul.bullets{margin:12px 0;padding-left:18px}
-    ul.bullets li{margin:8px 0;color:var(--muted)}
-
-    /* ===== Experiência ===== */
-    .job{margin-bottom:20px}
-    .job-header{display:flex;flex-direction:column;margin-bottom:6px}
-    .role{font-weight:700;font-size:15px}
-    .company-period{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
-    .company{font-size:13px;color:var(--muted)}
-    .period{font-size:13px;color:var(--muted)}
-    .job ul{margin:10px 0 0 18px}
-    .job ul li{margin:8px 0;color:var(--muted);text-align:justify}
-
-    /* ===== Sidebar ===== */
-    .side{
-      background:var(--card);
-      border-left:1px solid var(--border);
-      padding:28px 24px;
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
     }
-    .photo{
-      width:100%;
-      height:110px;
-      border-radius:8px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;
-      color:white;font-weight:700;font-size:18px;margin-bottom:18px
+
+    .contact {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
-    .side .pill{display:inline-block;background:white;color:var(--accent);font-weight:600;padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:12px}
-    .side h3{margin:12px 0 8px 0;font-size:13px}
-    .tech-list,.soft-list{display:flex;flex-direction:column;gap:6px}
-    .tech-list .item,.soft-list .item{font-size:13px;color:var(--muted)}
 
-    .download{text-align:center;margin-top:18px}
-    .btn{display:inline-block;padding:10px 14px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 6px 12px rgba(11,116,222,0.12)}
-    .btn:hover{background:var(--accent-2)}
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
 
-    footer.note{margin-top:18px;font-size:12px;color:var(--muted)}
+    .job-title {
+      font-weight: bold;
+      margin-top: 15px;
+    }
 
-    @media print{
-      body{background:white;padding:0}
-      .container{box-shadow:none;border:none;max-width:100%}
-      .btn{display:none}
-      a[href]:after{content:" (" attr(href) ")";}
+    .company {
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      color: #555;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    /* Botão de impressão */
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0073e6;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .print-btn:hover {
+      background: #005bb5;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+      body {
+        background: #fff;
+      }
+      .container {
+        box-shadow: none;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <!-- ===== Main content ===== -->
-    <section class="main">
-      <div class="name">
-        <h1>Leandro Antonio Fortunato</h1>
-        <div class="title">Engenheiro de Sistemas | Cyberdefense | TechLead</div>
-      </div>
-      <div class="contact">
-        <div>📍 São Paulo / SP</div><div class="dot">•</div>
-        <div>✉️ <a href="mailto:leandroantonio.fortunato@hotmail.com">leandroantonio.fortunato@hotmail.com</a></div><div class="dot">•</div>
-        <div>📱 <a href="tel:+5511986165672">+55 (11) 98616-5672</a></div><div class="dot">•</div>
-        <div>🔗 <a href="https://linkedin.com/in/leandro-antonio-fortunato-87517317b" target="_blank">LinkedIn</a></div>
-      </div>
+  <button class="print-btn" onclick="window.print()">Imprimir PDF</button>
+  <div class="container">
+    <h1>Leandro Antonio Fortunato</h1>
+    <div class="contact">
+      📍 São Paulo/SP | 📧 <a href="mailto:leandroantonio.fortunato@hotmail.com">leandroantonio.fortunato@hotmail.com</a> | 📱 (11) 98616-5672 | 🔗 <a href="https://www.linkedin.com/in/leandro-antonio-fortunato-87517317b" target="_blank">linkedin.com/in/leandro-antonio-fortunato-87517317b</a>
+    </div>
 
-      <h2 class="section">Apresentação Pessoal</h2>
-      <p class="lead">
-        Profissional com trajetória sólida em tecnologia e segurança de sistemas, atuando em projetos de alta complexidade e grande volume transacional. Carreira marcada pela resiliência diante de mudanças de área, preocupação constante com excelência e foco no cliente final. Facilidade para colaboração em equipe multidisciplinar, atuação estratégica em momentos de crise e entrega de soluções escaláveis, seguras e inovadoras.
-      </p>
+    <h2>Apresentação Pessoal</h2>
+    <p>Profissional com mais de 25 anos de experiência em tecnologia e segurança de sistemas, atuando em projetos críticos de alta complexidade e grande volume transacional. Carreira marcada pela resiliência em mudanças de área, excelência técnica e foco no cliente final. Reconhecido pela capacidade de atuar em momentos de crise, prevenir fraudes em larga escala e entregar soluções escaláveis e seguras em ambientes de alta pressão.</p>
 
-      <h2 class="section">Experiência Profissional</h2>
+    <h2>Resumo de Qualificações</h2>
+    <ul>
+      <li>Experiência em prevenção de fraudes e sustentação de sistemas críticos, com impacto direto em mais de 10 milhões de transações diárias (PIX, TED, TEF, entre outras).</li>
+      <li>Atuação em projetos de modernização e migração para cloud (AWS), aplicando arquitetura de microsserviços, Java e soluções de observabilidade.</li>
+      <li>Histórico de liderança em squads multidisciplinares, integração com UX e coordenação de fases de projetos estratégicos em canais digitais.</li>
+      <li>Forte atuação em gestão de crises (War Rooms), garantindo continuidade de operações em ambientes de alta criticidade.</li>
+      <li>Reconhecimento institucional por alta performance (PRAD e mérito com aumento salarial).</li>
+      <li>Forte habilidade em colaboração multidisciplinar, liderança técnica e comunicação eficaz.</li>
+    </ul>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="role">Engenheiro de Sistemas</div>
-          <div class="company-period">
-            <div class="company">Cyberdefense - Squad Segurança Tático e Motores de Decisão – Banco Itaú</div>
-            <div class="period">(02/2020 – 09/2025)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Atuação preventiva e reativa no combate a fraudes, com impacto direto em milhões de transações diárias.</li>
-          <li>Criação e ajustes de regras para análise de motor de decisão proprietário, ampliando eficiência na detecção de fraudes.</li>
-          <li>Modernização e migração do motor de decisão para Cloud (AWS), utilizando arquitetura de microsserviços.</li>
-          <li>Manutenção evolutiva integrando diferentes motores de decisão (PRM, Falcon, Simility, Biocatch).</li>
-          <li>Sustentação e modernização da infraestrutura para motor de decisão de terceiros (PRM).</li>
-          <li>Construção de soluções para coletar métricas de comportamento de clientes e suas transações, considerando o processamento de mais de 10 milhões de operações diárias entre PIX, TED e TEF, com arquitetura em microsserviços em AWS (Java 13, Aurora, Kafka, Docker, Terraform, Spring, Splunk, AppDynamics).</li>
-        </ul>
-      </div>
+    <h2>Experiência Profissional</h2>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="role">Engenheiro de Sistemas</div>
-          <div class="company-period">
-            <div class="company">TechLead – Internet Banking - Banco Itaú</div>
-            <div class="period">(05/2016 – 01/2020)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Liderança em projetos de criação e melhoria de produtos para Internet Banking, incluindo compra/venda de títulos do Tesouro Direto.</li>
-          <li>Planejamento, análise de requisitos e integração com equipe de UX, garantindo entregas alinhadas às necessidades do cliente.</li>
-          <li>Integração de mecanismos de autenticação transacional, fortalecendo segurança e experiência do usuário.</li>
-        </ul>
-      </div>
+    <div class="job-title">Engenheiro de Sistemas – Cyberdefense</div>
+    <div class="company">Banco Itaú | Squad Segurança Tático e Motores de Decisão</div>
+    <div class="date">02/2020 – 09/2025</div>
+    <ul>
+      <li>Atuei no combate preventivo e reativo a fraudes, impactando milhões de transações diárias.</li>
+      <li>Criei e ajustei regras de motor de decisão proprietário, elevando a eficiência na detecção de fraudes.</li>
+      <li>Participei da modernização e migração do motor de decisão para AWS Cloud, com arquitetura de microsserviços.</li>
+      <li>Realizei manutenção evolutiva integrando diferentes motores (PRM, Falcon, Simility, Biocatch).</li>
+      <li>Participei da construção de soluções que processavam +10 milhões de transações diárias, ampliando escalabilidade e precisão na identificação de fraudes.</li>
+      <li>Tecnologias: Java 13, AWS Aurora (MySQL), Kafka, Docker, AWS Pipeline, AWS ECS, Terraform, Splunk, Spring, AppDynamics.</li>
+    </ul>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="role">Analista de Sistemas</div>
-          <div class="company-period">
-            <div class="company">Área Sustentação de Câmbio - Banco Itaú</div>
-            <div class="period">(11/2014 – 04/2016)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Atuação em projetos de pequeno e médio porte em todas as fases do ciclo de vida de sistemas.</li>
-          <li>Participação em projetos estratégicos de modernização de câmbio, da viabilidade à sustentação.</li>
-        </ul>
-      </div>
+    <div class="job-title">Engenheiro de Sistemas – TechLead Internet Banking</div>
+    <div class="company">Banco Itaú | Canal Digital</div>
+    <div class="date">05/2016 – 01/2020</div>
+    <ul>
+      <li>Liderei projetos estratégicos no Internet Banking, incluindo compra e venda de títulos Tesouro Direto e modernização de comprovantes.</li>
+      <li>Coordenei planejamento, análise de requisitos, prototipação e integração com equipe de UX.</li>
+      <li>Gerenciei fases de projetos junto à fábrica de software, garantindo qualidade e prazos.</li>
+      <li>Implantei mecanismos de autenticação transacional, reforçando segurança e experiência do usuário.</li>
+    </ul>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="role">Analista de Sistemas</div>
-          <div class="company-period">
-            <div class="company">Área Câmbio - Banco Itaú</div>
-            <div class="period">(12/2002 – 10/2014)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Desenvolvimento e manutenção de automações de processos via robotização de fluxos de câmbio.</li>
-          <li>Criação de aplicativos front-end integrados a DB2 e Oracle.</li>
-          <li>Integração sistêmica de instituições financeiras adquiridas pelo Itaú Unibanco.</li>
-          <li>Análise de performance e tuning de stored procedures em Oracle.</li>
-          <li>Participação em War Rooms e gestão de crises decorrentes de instabilidades sistêmicas.</li>
-        </ul>
-      </div>
+    <div class="job-title">Analista de Sistemas – Sustentação de Câmbio</div>
+    <div class="company">Banco Itaú</div>
+    <div class="date">11/2014 – 04/2016</div>
+    <ul>
+      <li>Atuei em projetos de pequeno e médio porte, cobrindo todo o ciclo de desenvolvimento (planejamento, análise, desenvolvimento, testes e manutenção).</li>
+      <li>Contribuí em iniciativas de modernização de câmbio, com entregas alinhadas às áreas de produtos.</li>
+      <li>Utilizei metodologias ágeis de desenvolvimento e gestão de projetos.</li>
+    </ul>
 
-      <div class="job">
-        <div class="job-header">
-          <div class="role">Analista de Sistemas</div>
-          <div class="company-period">
-            <div class="company">Área Jurídico Trabalhista - Banco Itaú</div>
-            <div class="period">(05/2000 – 09/2002)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Implementação de sistema de digitalização de processos trabalhistas.</li>
-          <li>Administração de infraestrutura de contingência do jurídico em períodos críticos.</li>
-          <li>Desenvolvimento de integrações entre IBM Db2 e Excel via VBA, otimizando relatórios.</li>
-        </ul>
-      </div>
+    <div class="job-title">Analista de Sistemas – Câmbio</div>
+    <div class="company">Banco Itaú</div>
+    <div class="date">12/2002 – 10/2014</div>
+    <ul>
+      <li>Desenvolvi e mantive automações de processos de câmbio (exportação, importação, transferências internacionais).</li>
+      <li>Criei aplicativos front-end para o Backoffice de câmbio, integrados a DB2 e Oracle.</li>
+      <li>Realizei tuning de store procedures em Oracle, reduzindo tempo de processamento.</li>
+      <li>Participei de War Rooms e gestão de crises sistêmicas, assegurando continuidade operacional.</li>
+      <li>Atuei em integrações sistêmicas após aquisições do Itaú Unibanco.</li>
+      <li>Gerenciei infraestrutura de contingência em períodos críticos de negociação salarial.</li>
+    </ul>
 
-      <h2 class="section">Formação Acadêmica</h2>
-      <ul class="bullets">
-        <li>Ciências da Computação – Universidade São Marcos (1998 - 2001)</li>
-        <li>Administração de Banco de Dados Oracle - FIAP (2002 - 2004)</li>
-      </ul>
+    <div class="job-title">Analista de Sistemas – Jurídico Trabalhista</div>
+    <div class="company">Banco Itaú</div>
+    <div class="date">05/2000 – 09/2002</div>
+    <ul>
+      <li>Implantei sistema de digitalização de processos trabalhistas, acompanhando todas as fases do projeto.</li>
+      <li>Mantive infraestrutura sistêmica do jurídico trabalhista, com integração a escritórios terceirizados.</li>
+      <li>Desenvolvi rotinas automatizadas para geração de relatórios estatísticos com IBM Db2 + VBA, acelerando análises e decisões.</li>
+      <li>Administrei infraestrutura de contingência para períodos críticos de negociação salarial.</li>
+    </ul>
 
-      <h2 class="section">Competências Técnicas</h2>
-      <ul class="bullets">
-        <li><b>Linguagens & Frameworks:</b> Java 13, Spring, Json, XML, YAML</li>
-        <li><b>Cloud & Infraestrutura:</b> AWS (Aurora, ECS, Pipeline, Terraform, Docker)</li>
-        <li><b>Banco de Dados:</b> AWS Aurora (MySQL) / MySQL / Oracle</li>
-        <li><b>Observabilidade & Monitoramento:</b> Splunk, AppDynamics</li>
-        <li><b>Segurança & Fraude:</b> PRM, Falcon, Simility, Biocatch</li>
-      </ul>
+    <h2>Formação Acadêmica</h2>
+    <ul>
+      <li>Ciências da Computação – Universidade São Marcos (1998 – 2001)</li>
+      <li>Administração de Banco de Dados Oracle – FIAP (2002 – 2004)</li>
+    </ul>
 
-      <h2 class="section">Competências Comportamentais</h2>
-      <ul class="bullets">
-        <li>Resiliência e adaptação a mudanças</li>
-        <li>Liderança colaborativa</li>
-        <li>Gestão de crises</li>
-        <li>Comunicação eficaz</li>
-        <li>Orientação para resultados e excelência</li>
-      </ul>
+    <h2>Certificações e Cursos Relevantes</h2>
+    <ul>
+      <li>Computação em nuvem AWS.</li>
+      <li>Engenharia de prompts com IA.</li>
+      <li>Criação de agentes de IA - N8N.</li>
+      <li>Vibe Coding - IA.</li>
+      <li>Técnicas Hacker em redes Wi-Fi.</li>
+      <li>IT Security Specialist.</li>
+      <li>REST API Design, Development & Management.</li>
+    </ul>
 
-      <h2 class="section">Habilidades Principais</h2>
-      <ul class="bullets">
-        <li>Prevenção a fraudes</li>
-        <li>Desenvolvimento backend com Java e Spring Framework</li>
-        <li>Arquiteturas de APIs e Modelagem de Dados</li>
-        <li>Monitoramento e Observabilidade de Sistemas</li>
-      </ul>
+    <h2>Competências Técnicas</h2>
+    <ul>
+      <li>Linguagens & Frameworks: Java 13, Spring, JSON, XML, YAML</li>
+      <li>Cloud & Infraestrutura: AWS (Aurora, ECS, Pipeline, Terraform, Docker)</li>
+      <li>Banco de Dados: AWS Aurora (MySQL), MySQL, Oracle</li>
+      <li>Observabilidade & Monitoramento: Splunk, AppDynamics</li>
+      <li>Segurança & Fraude: PRM, Falcon, Simility, Biocatch</li>
+    </ul>
 
-      <h2 class="section">Certificações e Cursos Relevantes</h2>
-      <ul class="bullets">
-        <li>Computação em nuvem AWS</li>
-        <li>Engenharia de prompts com IA</li>
-        <li>Criação de agentes de IA - N8N</li>
-        <li>Vibe Coding - IA</li>
-        <li>Técnicas Hacker em redes Wi-Fi</li>
-        <li>IT Security Specialist</li>
-        <li>REST API Design, Development & Management</li>
-      </ul>
-    </section>
+    <h2>Competências Comportamentais</h2>
+    <ul>
+      <li>Resiliência e adaptação a mudanças</li>
+      <li>Liderança colaborativa</li>
+      <li>Gestão de crises</li>
+      <li>Comunicação eficaz</li>
+      <li>Orientação para resultados e excelência</li>
+    </ul>
 
-    <!-- ===== Sidebar ===== -->
-    <aside class="side">
-      <div class="photo">L A F</div>
-      <div class="pill">Engenheiro de Sistemas • Cyberdefense</div>
-      <h3>Dados</h3>
-      <div class="tech-list">
-        <div class="item">📍 São Paulo, SP</div>
-        <div class="item">✉️ <a href="mailto:leandroantonio.fortunato@hotmail.com">Email</a></div>
-        <div class="item">📱 <a href="tel:+5511986165672">Telefone</a></div>
-        <div class="item">🔗 <a href="https://linkedin.com/in/leandro-antonio-fortunato-87517317b" target="_blank">LinkedIn</a></div>
-      </div>
-      <div class="download">
-        <a class="btn" href="#">📄 Baixar CV (PDF)</a>
-      </div>
-    </aside>
-  </main>
+    <h2>Habilidades Principais</h2>
+    <ul>
+      <li>Prevenção a fraudes</li>
+      <li>Desenvolvimento backend com Java e Spring</li>
+      <li>Arquitetura de APIs e modelagem de dados</li>
+      <li>Monitoramento e observabilidade de sistemas</li>
+    </ul>
+  </div>
 </body>
 </html>
